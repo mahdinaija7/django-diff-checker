@@ -3,13 +3,6 @@ from difflib import Differ
 differ = Differ()
 
 
-def chunks(lst, n):
-    l = []
-    for i in range(0, len(lst), n):
-        l.append(lst[i : i + n])
-    return l
-
-
 def make_lines_equals(l, r):
     max_length = max(len(l), len(r))
     l += [""] * (max_length - len(l))
@@ -18,10 +11,7 @@ def make_lines_equals(l, r):
 
 def check_diff(l, r):
     left, right = [], []
-    print(l, r)
     for li, ri in zip(l, r):
-        print("li:", r"{}".format(li))
-        print("ri:", r"{}".format(ri))
 
         li = "­" if li == "\r" else li
         ri = "­" if ri == "\r" else ri
@@ -39,7 +29,6 @@ def check_diff(l, r):
                 left.append("<div class='grey'>­</div>")
             else:
                 differance = list(differ.compare(li, ri))
-                print(differance)
                 right.append(
                     "<div class='red'>{}</div>".format(
                         span_it(differance, "- ", "lost")

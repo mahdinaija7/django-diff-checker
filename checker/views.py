@@ -11,8 +11,6 @@ def checker(request):
     if request.method == "POST":
         first_text = request.POST.get("first")
         second_text = request.POST.get("second")
-        print(first_text.split("\n"))
-        print(second_text.split("\n"))
     context = {}
     return render(request, "checker/index.html", context=context)
 
