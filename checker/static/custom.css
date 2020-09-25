@@ -1,0 +1,38 @@
+* {
+  margin-top: 1%;
+  font-size: 30px;
+}
+
+div {
+  white-space: pre-wrap;
+}
+
+span {
+  font-size: 20px;
+}
+
+.textarea-content {
+  font-size: 20px;
+  resize: none;
+}
+
+.green {
+  background-color: #b5efdb;
+}
+
+.grey {
+  background-color: #eaeef0;
+}
+.red {
+  background-color: #ff8983;
+}
+.lost {
+  background-color: #ff4a46;
+}
+.new {
+  background-color: #6bdfb8;
+}
+
+table > tbody > tr > td > div {
+  font-size: 20px;
+}
